@@ -4,7 +4,9 @@ async function sprintChallenge5() { // Note the async keyword, in case you wish 
   try {
     
     const [learnersResponse, mentorsResponse] = await Promise.all([
+      // eslint-disable-next-line no-undef
       axios.get('http://localhost:3003/api/learners'),
+      // eslint-disable-next-line no-undef
       axios.get('http://localhost:3003/api/mentors'),
     ]);
 
@@ -66,7 +68,7 @@ function createLearnerCard(learner) {
   idElement.style.display = 'none';
   fullName.appendChild(idElement);
 
-  const email = document.createElement('p');
+  const email = document.createElement('div');
   email.textContent = `${learner.email}`;
   card.appendChild(email);
 
